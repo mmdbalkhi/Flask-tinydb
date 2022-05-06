@@ -1,9 +1,4 @@
-from typing import Callable
-from typing import Type
-
 import tinydb
-from flask import _app_ctx_stack
-from flask import current_app
 from flask import Flask
 
 

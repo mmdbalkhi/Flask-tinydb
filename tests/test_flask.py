@@ -1,9 +1,6 @@
 import unittest
-from pathlib import Path
 
-import pytest
 from flask import Flask
-from flask import request
 
 from flask_tinydb import TinyDB
 
