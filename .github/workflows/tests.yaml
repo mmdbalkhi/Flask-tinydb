@@ -1,0 +1,60 @@
+name: Tests
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "docs/**"
+      - "*.md"
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - "docs/**"
+      - "*.md"
+jobs:
+  tests:
+    name: ${{ matrix.name }} 🤖
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: "Python 3.10", python: "3.10" }
+          - { name: "Python 3.9", python: "3.9" }
+          - { name: "Python 3.8", python: "3.8" }
+          - { name: "Python 3.7", python: "3.7" }
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3 🐍
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Update PIP ✨
+        run: |
+          pip install -U wheel
+          pip install -U setuptools
+          python -m pip install -U pip
+
+      - name: Install requirements ⚙️
+        run: |
+          pip install -r requirements.txt
+          pip install pytest flake8 coverage
+          pip install -e .
+
+      - name: Run Flake8 💫
+        run: flake8 breeze tests setup.py
+
+      - name: ⚡ create .env file
+        run: echo "SECRET_KEY=`date | sha256sum | base64 | head -c 60`" > .env
+
+      - name: Run Tests and collect coverage 🧪
+        run: |
+          coverage run -m pytest
+          coverage xml
+      - name: Upload coverage to Codecov 📈
+        uses: codecov/codecov-action@v3
+        with:
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
