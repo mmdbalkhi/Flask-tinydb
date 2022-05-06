@@ -23,5 +23,3 @@ class TestTinyDB(unittest.TestCase):
     def test_read(self):
         db = TinyDB(app).get_db()
         assert db.all()[0] == {"test": "test"}
-
-    
