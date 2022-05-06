@@ -131,4 +131,6 @@ dmypy.json
 # flask-tinydb
 
 flask.db
-tests/*.{yaml, yml, json}
+tests/*.yaml
+tests/*.yml
+tests/*.json
