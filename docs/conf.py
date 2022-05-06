@@ -41,7 +41,7 @@ html_context = {
     "project_links": [
         ProjectLink("Donate", "https://palletsprojects.com/donate"),
         ProjectLink("PyPI Releases", "https://pypi.org/project/flask-tinydb/"),
-        ProjectLink("Source Code", "mmdbalkhi/flask-tinydb"),
+        ProjectLink("Source Code", "https://mmdbalkhi/flask-tinydb"),
         ProjectLink(
             "Issue Tracker", "https://github.com/mmdbalkhi/flask-tinydb/issues/"
         ),
