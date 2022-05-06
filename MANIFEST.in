@@ -1,6 +1,7 @@
 include requirements.txt
 graft docs
 prune docs/_build
+graft example
 graft tests
 include flask_tinydb/py.typed
 global-exclude *.pyc
