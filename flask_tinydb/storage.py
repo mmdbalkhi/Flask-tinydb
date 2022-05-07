@@ -29,13 +29,13 @@ from tinydb import Storage
 class YAMLStorage(Storage):
     """YAML Storage is a tinydb storage that uses YAML to store data."""
 
-    def __init__(self, filename: str = "db.yaml") -> None:
+    def __init__(self, filename: Path = Path("db.yaml")) -> None:
         """Initialize YAMLStorage.
 
         :args:
             - `filename`: path to the YAML file
         """
-        self.filename = Path(filename)
+        self.filename = filename
 
         if not self.filename.exists():
             self.filename.touch()

@@ -3,14 +3,19 @@ Flask-tinydb
 
 flask-tinydb is a Flask extension that provides a TinyDB database.
 
+- tiny 🔍
+- fast 🚀
+- simple 💡
+- lightweight 📦
+- typed ✨
 
 requirements
 ----------------
 
 - Python 3.7+
-- Flask 2.0+
+- Flask 2.1+
 - TinyDB 4.0+
-
+- pyyaml 6.0+
 
 install
 -----------------

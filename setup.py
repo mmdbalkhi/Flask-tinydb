@@ -1,5 +1,6 @@
 from setuptools import setup
 
+
 def readme():
     with open("README.rst", encoding="utf8") as f:
         return f.read()

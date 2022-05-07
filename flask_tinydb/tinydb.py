@@ -1,3 +1,5 @@
+from typing import Optional
+
 import tinydb
 from flask import Flask
 
@@ -5,10 +7,9 @@ from flask import Flask
 class TinyDB:
     """tinydb class for flask"""
 
-    def __init__(self, app: Flask = None) -> None:
+    def __init__(self, app: Flask) -> None:
         self.app = app
-        if app is not None:
-            self.init_app(app)
+        self.init_app(app)
 
     def init_app(self, app: Flask) -> None:
         app.config.setdefault("TINYDB_DATABASE_PATH", "flask.db")
