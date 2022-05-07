@@ -7,13 +7,14 @@ from flask_tinydb import YAMLStorage
 
 
 def test_yaml_storage():
-
     # Create a temporary YAML file
     path = Path(__file__).parent / "test_storage.yaml"
 
-    # remove it if it exists
-    if path.exists():
-        path.unlink()
+    path.unlink()
+    path.touch()
+
+    # Create a temporary YAML file
+    path = Path(__file__).parent / "test_storage.yaml"
 
     storage = YAMLStorage
 
@@ -33,3 +34,20 @@ def test_yaml_storage():
 
     db.remove(name.name == "John Doe II")
     assert db.all() == [{"name": "Another John Doe"}]
+
+
+def test_yaml_storage_if_file_not_exists():
+
+    # Create a temporary YAML file
+    path = Path(__file__).parent / "test_storage.yaml"
+    path.unlink()
+
+    storage = YAMLStorage
+
+    # Create a TinyDB instance
+    db = TinyDB(path, storage=storage)
+
+    name = Query()
+
+    db.insert({"name": "John Doe"})
+    assert db.all() == [{"name": "John Doe"}]
