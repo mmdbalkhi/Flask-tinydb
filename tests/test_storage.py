@@ -10,11 +10,10 @@ def test_yaml_storage():
     # Create a temporary YAML file
     path = Path(__file__).parent / "test_storage.yaml"
 
-    path.unlink()
-    path.touch()
-
-    # Create a temporary YAML file
-    path = Path(__file__).parent / "test_storage.yaml"
+    try:
+        path.unlink()
+    except FileNotFoundError:
+        path.touch()
 
     storage = YAMLStorage
 
@@ -40,8 +39,11 @@ def test_yaml_storage_if_file_not_exists():
 
     # Create a temporary YAML file
     path = Path(__file__).parent / "test_storage.yaml"
-    path.unlink()
 
+    try:
+        path.unlink()
+    except FileNotFoundError:  # pragma: no cover
+        pass
     storage = YAMLStorage
 
     # Create a TinyDB instance
