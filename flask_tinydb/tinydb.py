@@ -1,5 +1,3 @@
-from typing import Optional
-
 import tinydb
 from flask import Flask
 

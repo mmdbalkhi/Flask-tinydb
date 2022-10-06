@@ -1,7 +1,6 @@
 import unittest
 
 from flask import Flask
-
 from flask_tinydb import TinyDB
 
 app = Flask(__name__)
