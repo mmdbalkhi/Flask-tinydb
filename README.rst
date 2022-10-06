@@ -12,10 +12,10 @@ flask-tinydb is a Flask extension that provides a TinyDB database.
 requirements
 ----------------
 
-- Python 3.7+
-- Flask 2.1+
+- Python 3.8+
+- Flask 1.0+
 - TinyDB 4.0+
-- pyyaml 6.0+
+- pyyaml 6.0+(optinal)
 
 install
 -----------------
@@ -50,7 +50,6 @@ usage
     @app.route('/users')
     def users():
         return jsonify(db.all())
-    
+
     if __name__ == '__main__':
         app.run()
-
