@@ -39,7 +39,6 @@ html_theme = "flask"
 html_theme_options = {"index_sidebar_logo": False}
 html_context = {
     "project_links": [
-        ProjectLink("Donate", "https://palletsprojects.com/donate"),
         ProjectLink("PyPI Releases", "https://pypi.org/project/flask-tinydb/"),
         ProjectLink("Source Code", "https://mmdbalkhi/flask-tinydb"),
         ProjectLink(

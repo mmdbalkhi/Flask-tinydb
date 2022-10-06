@@ -3,6 +3,7 @@ api
 
 .. module:: flask_tinydb
 
+
 TinyDB
 -------
 
@@ -12,5 +13,5 @@ TinyDB
 Storage
 --------
 
-.. automodule:: flask_tinydb.storage
+.. automodule:: flask_tinydb.storages
    :members:

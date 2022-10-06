@@ -50,7 +50,7 @@ usage
     @app.route('/users')
     def users():
         return jsonify(db.all())
-    
+
     if __name__ == '__main__':
         app.run()
 
@@ -60,6 +60,7 @@ usage
    :caption: Contents:
 
    api
+   storage
 
 Indices and tables
 ==================

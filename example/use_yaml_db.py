@@ -1,10 +1,9 @@
 from flask import Flask
-
-from flask_tinydb import storage
 from flask_tinydb import TinyDB
+from flask_tinydb.storages import YAMLStorage
 
 app = Flask(__name__)
-app.config["TINYDB_DATABASE_STORAGE"] = storage.YAMLStorage
+app.config["TINYDB_DATABASE_STORAGE"] = YAMLStorage
 db = TinyDB(app)
 
 

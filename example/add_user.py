@@ -1,6 +1,5 @@
 from flask import Flask
 from flask import jsonify
-
 from flask_tinydb import TinyDB
 
 app = Flask(__name__)
