@@ -3,4 +3,5 @@
 -r typing.in
 pip-compile-multi
 pre-commit
+pytest
 tox
