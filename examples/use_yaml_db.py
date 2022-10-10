@@ -1,4 +1,5 @@
 from flask import Flask
+
 from flask_tinydb import TinyDB
 from flask_tinydb.storages import YAMLStorage
 
