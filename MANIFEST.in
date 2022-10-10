@@ -1,7 +1,8 @@
-include requirements.txt
+include tox.ini
+include requirements/*.txt
 graft docs
 prune docs/_build
-graft example
+graft examples
 graft tests
-include flask_tinydb/py.typed
+include src/flask_tinydb/py.typed
 global-exclude *.pyc

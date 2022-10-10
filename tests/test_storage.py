@@ -1,8 +1,9 @@
 import tempfile
 
-from flask_tinydb.storages import YAMLStorage
 from tinydb import Query
 from tinydb import TinyDB
+
+from flask_tinydb.storages import YAMLStorage
 
 
 def test_yaml_storage():

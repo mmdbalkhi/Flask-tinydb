@@ -53,3 +53,11 @@ usage
 
     if __name__ == '__main__':
         app.run()
+
+
+Links
+-----
+
+-   Documentation: https://flask-tinydb.readthedocs.io/
+-   Source Code: https://github.com/mmdbalkhi/flask-tinydb
+-   Issue Tracker: https://github.com/mmdbalkhi/flask-tinydb/issues/
