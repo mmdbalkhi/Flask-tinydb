@@ -1,14 +1,10 @@
 import io
 import os
 import sys
-from typing import Any
-from typing import Dict
-from typing import Optional
+from typing import Any, Dict, Optional
 
 from tinydb import Storage as _Storage
-from tinydb.storages import JSONStorage
-from tinydb.storages import MemoryStorage
-from tinydb.storages import touch
+from tinydb.storages import JSONStorage, MemoryStorage, touch
 
 __all__ = (
     "JSONStorage",
@@ -74,7 +70,6 @@ class YAMLStorage(Storage):
     """
 
     def read(self) -> Optional[Dict[str, Dict[str, Any]]]:
-
         # Get the file size by moving the cursor to the file end and reading
         # its location
         self._handle.seek(0, os.SEEK_END)

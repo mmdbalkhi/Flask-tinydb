@@ -1,7 +1,6 @@
 import tempfile
 
-from tinydb import Query
-from tinydb import TinyDB
+from tinydb import Query, TinyDB
 
 from flask_tinydb.storages import YAMLStorage
 
