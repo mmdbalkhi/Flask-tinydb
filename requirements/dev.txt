@@ -45,6 +45,8 @@ idna==3.4
     # via requests
 imagesize==1.4.1
     # via sphinx
+importlib-metadata==8.7.0
+    # via sphinx
 iniconfig==1.1.1
     # via pytest
 jinja2==3.1.2
@@ -102,7 +104,7 @@ pyyaml==6.0
     # via
     #   -r tests.in
     #   pre-commit
-requests==2.31.0
+requests==2.32.4
     # via sphinx
 six==1.16.0
     # via tox
@@ -136,7 +138,12 @@ sphinxcontrib-serializinghtml==1.1.5
 toml==0.10.2
     # via pre-commit
 tomli==2.0.1
-    # via pytest
+    # via
+    #   build
+    #   mypy
+    #   pep517
+    #   pytest
+    #   tox
 toposort==1.7
     # via pip-compile-multi
 tox==3.26.0
@@ -157,6 +164,8 @@ virtualenv==20.16.5
     #   tox
 wheel==0.38.1
     # via pip-tools
+zipp==3.23.0
+    # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
